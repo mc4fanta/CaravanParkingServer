@@ -1,0 +1,1 @@
+INSERT INTO locations (latitude, longitude) VALUES (54.72767, -1.25259);
