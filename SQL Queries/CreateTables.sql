@@ -1,5 +1,6 @@
 CREATE TABLE locations (
 	id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 	latitude FLOAT NOT NULL,
-	longitude FLOAT NOT NULL
+	longitude FLOAT NOT NULL,
+	description TEXT
 );

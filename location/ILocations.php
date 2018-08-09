@@ -9,6 +9,8 @@ interface ILocations {
     const NORTH_HEAST_LONG = "nh_long";
     const SOUTH_WEST_LAT = "sw_lat";
     const SOUTH_WEST_LONG = "sw_long";
+	
+	const DESCRIPTION = "desc";
 }
 
 ?>

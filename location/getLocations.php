@@ -13,7 +13,7 @@ class getLocations implements ILocations, ILocationDatabase {
 		$db->bind("nh_long", $_POST[ILocations::NORTH_HEAST_LONG]);
 		
 		// get locations from database
-		$dbLocations = $db->query("SELECT ".ILocationDatabase::DB_LATITUDE.", ".ILocationDatabase::DB_LONGITUDE
+		$dbLocations = $db->query("SELECT ".ILocationDatabase::DB_LATITUDE.", ".ILocationDatabase::DB_LONGITUDE.", ".ILocationDatabase::DB_DESCRIPTION
 									." FROM ".ILocationDatabase::DB_TABLE_NAME
 									." WHERE ".ILocationDatabase::DB_LATITUDE." >= :sw_lat"
 										." AND ".ILocationDatabase::DB_LATITUDE." <= :nh_lat"
@@ -25,6 +25,7 @@ class getLocations implements ILocations, ILocationDatabase {
 			$location = array();
 			$location[ILocations::LATITUDE] = $row[ILocationDatabase::DB_LATITUDE];
 			$location[ILocations::LONGITUDE] = $row[ILocationDatabase::DB_LONGITUDE];
+			$location[ILocations::DESCRIPTION] = $row[ILocationDatabase::DB_DESCRIPTION];
 			$this->locations[] = $location;
 		}
 	}
